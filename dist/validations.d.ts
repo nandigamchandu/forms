@@ -1,0 +1,25 @@
+import { ArraySchema, DateSchema, MixedSchema, NumberSchema, Schema, StringSchema, TestOptionsMessage } from 'yup';
+export declare const required: (message?: TestOptionsMessage) => <S extends MixedSchema>(schema: S) => S;
+export declare const nullable: (isNullable?: true) => <S extends MixedSchema>(schema: S) => S;
+export declare const notRequired: () => <S extends MixedSchema>(schema: S) => S;
+export declare function minLength(min: number, message?: TestOptionsMessage): (schema: StringSchema) => StringSchema;
+export declare function min(min: number, message?: TestOptionsMessage): (schema: NumberSchema) => NumberSchema;
+export declare function after(min: Date, message?: TestOptionsMessage): (schema: DateSchema) => DateSchema;
+export declare function maxLength(max: number, message?: TestOptionsMessage): (schema: StringSchema) => StringSchema;
+export declare function max(max: number, message?: TestOptionsMessage): (schema: NumberSchema) => NumberSchema;
+export declare function before(max: Date, message?: TestOptionsMessage): (schema: DateSchema) => DateSchema;
+export declare const length: (limit: number, message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const matches: (exp: RegExp, message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const email: (message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const url: (message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const trim: (message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const lowercase: (message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const uppercase: (message?: TestOptionsMessage) => (schema: StringSchema) => StringSchema;
+export declare const lessThan: (max: number, message?: TestOptionsMessage) => (schema: NumberSchema) => NumberSchema;
+export declare const moreThan: (min: number, message?: TestOptionsMessage) => (schema: NumberSchema) => NumberSchema;
+export declare const positive: (message?: TestOptionsMessage) => (schema: NumberSchema) => NumberSchema;
+export declare const negative: (message?: TestOptionsMessage) => (schema: NumberSchema) => NumberSchema;
+export declare const integer: (message?: TestOptionsMessage) => (schema: NumberSchema) => NumberSchema;
+export declare const truncate: () => (schema: NumberSchema) => NumberSchema;
+export declare function of<U>(type: Schema<U>): <T>(schema: ArraySchema<T>) => ArraySchema<U>;
+//# sourceMappingURL=validations.d.ts.map
